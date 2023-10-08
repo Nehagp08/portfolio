@@ -1,0 +1,986 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #081b29;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00abf0;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+.header.sticky{
+    background: var(--bg-color);
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+} 
+.logo:hover{
+    color: var(--main-color);
+}
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+ } 
+section{
+    min-height: auto;
+    padding: 10rem 9% 2rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    justify-content: baseline;
+}
+
+.home-img img
+{
+   width: 20vw;
+   height: 300px;
+   border-radius: 19px;
+   margin: 14rem 20rem;
+   border: .2rem solid var(--main-color);
+}
+.home-content{
+    max-width: 60rem;
+    height: auto;
+}
+.home-content #home_position{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+.home-content #home_position:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--main-color) ;
+}
+
+.home-content #home_name{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height:1.3;
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+.btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+    margin: 9px 3px 9px 3px;
+}
+.btn-box .btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box .btn:hover{
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2){
+    background: transparent;
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2):hover{
+    color: var(--bg-color);
+
+}
+.btn-box .btn:nth-child(2)::before{
+    background: var(--main-color);
+}
+.btn-box .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box .btn:hover:before{
+width: 100%;
+}
+ .home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    text-decoration: none;
+    margin: -1rem 1.5rem -1rem 1rem;
+}
+.home-sci a::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: var(--main-color);
+z-index: -1;
+transition: .5s;    
+}
+.home-sci a:hover{
+    color: var(--bg-color);
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+/* ----------------about-------------------------------------------- */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding-bottom: 6rem;
+}
+.heading{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+span{
+    color: var(--main-color);
+}
+.about_container{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+.about-img{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-img #about_my_img{
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+.about-content{
+    text-align: center;
+}
+.about-content #about_content_heading{
+    font-size: 2.6rem;
+}
+.about-content #about_content_para{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.btn-box.btns{
+    display: inline-block;
+     width: 39rem;
+}
+.btn-box.btns a{
+    width: 150px;
+    height: 100%;
+    font-size: 19px;
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    padding: 10px 10px;
+}
+.btn-box.btns a::before{
+    background: var(--second-bg-color);
+}
+/* -------------Section Education Design------------------------------------ */
+body {
+    font-family: Helvetica, sans-serif;
+}
+ /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+ /* Container around content */
+    .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+/* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid var(--main-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+/* Place the container to the left */
+  .left {
+    left: 0;
+  }
+ /* Place the container to the right */
+  .right {
+    left: 50%;
+}
+ /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgb(36, 123, 194);
+ }
+/* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(36, 123, 194) transparent transparent;
+  }
+/* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+/* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: var(--main-color);
+    position: relative;
+    border-radius: 6px;
+  }
+.content #content_para{
+    font-size: 1.3rem;
+  }
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+ /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+ /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+ /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+/* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+ /* --------------------------Section Skills Design ---------------------*/
+ .skill_box{ 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    box-shadow: 4px 4px 4px var(--main-color);
+    border: 1px solid var(--main-color); 
+}
+#lang{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 4px;
+}
+/*******************************************************/
+.skill_box .skill_front{
+    width: 49%;
+    height: auto;
+}
+/********************************************************/
+.skill_box .skill_back
+{
+   width: 49%;
+   height: auto;
+}
+ .subject {
+    margin-bottom: 30px;
+    position: relative;
+    overflow-x:hidden;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.subject > p {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--main-color);
+    margin: 0;
+}
+.subject:before{
+    width: 100%;
+    height: 18px;
+    border-radius: 10px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #959595;
+    bottom: 0;
+}
+.skill_bar {
+    border-radius: 10px;
+    width: 100%;
+    height: 18px;
+    background: var(--main-color);
+    display: block;
+    position: relative;
+}
+.skill_bar span{
+    position: absolute;
+    border-top: 5px solid var(--main-color);
+    top: -30px;
+    padding: 0;
+    font-size: 18px;
+    padding: 3px 0;
+    font-weight: 500;
+}
+.skill_bar {
+    position: relative;
+} 
+/* SKILL 1 */
+.language1{
+    width: 80%;
+    animation: html 2s;
+}
+.language1 .subject1 {
+    right: 0;
+}
+/* SKILL 2 */
+.language2{
+    width: 85%;
+    animation: css 2s;
+}
+.language2 .subject2 {
+    right: 0;
+}
+/* SKILL 3 */
+.language3{
+    width: 50%;
+    animation: javascript 2s;
+}
+.language3 .subject3 {
+    right: 0;
+}
+/* SKILL 4 */
+.language4{
+    width: 80%;
+    animation: bootstrap 2s;
+}
+.language4 .subject4 {
+    right: 0;
+}
+/* SKILL 5 */
+.language5{
+  width: 70%;
+  animation: Wordpress 2s;
+}
+.language5 .subject5 {
+  right: 0;
+}
+/* SKILL 6 */
+.language6{
+    width: 70%;
+    animation: php 2s;
+}
+.language6 .subject6 {
+    right: 0;
+}
+/* SKILL 7 */
+.language7{
+    width: 50%;
+    animation: java 2s;
+}
+.language7 .subject7 {
+    right: 0;
+}
+/* SKILL 8 */
+.language8{
+    width: 96%;
+    animation: sql 2s;
+}
+.language8 .subject8 {
+    right: 0;
+}
+/* SKILL 9 */
+.language9{
+    width: 95%;
+    animation: mysql 2s;
+}
+.language9 .subject9 {
+    right: 0;
+}
+/* SKILL 10 */
+.language10{
+    width: 91%;
+    animation: mongodb 2s;
+}
+.language10 .subject10 {
+    right: 0;
+}
+@keyframes html{
+	0%{
+		width: 0%;
+	}100%{
+		width: 80%;
+	}
+}
+@keyframes css{ 
+	0%{
+		width: 0%;
+	}100%{
+		width: 85%;
+	}
+}
+@keyframes javascript{ 
+	0%{
+		width: 0%;
+	}100%{
+		width: 45%;
+	}
+}
+@keyframes bootstrap{ 
+	0%{
+		width: 0%;
+	}100%{
+		width: 75%;
+	}
+}
+@keyframes Wordpress{ 
+	0%{
+		width: 0%;
+	}100%{
+		width: 70%;
+	}
+}
+@keyframes php{
+	0%{
+		width: 0%;
+	}100%{
+		width: 78%;
+	}
+}
+@keyframes nodejs{ 
+	0%{
+		width: 0%;
+	}100%{
+		width: 45%;
+	}
+}
+@keyframes java{ 
+	0%{
+		width: 0%;
+	}100%{
+		width: 50%;
+	}
+}
+@keyframes sql{ 
+	0%{
+		width: 0%;
+	}100%{
+		width: 96%;
+	}
+}
+@keyframes mysql{ 
+	0%{
+		width: 0%;
+	}100%{
+		width: 95%;
+	}
+}
+@keyframes mongodb{
+	0%{
+		width: 0%;
+	}100%{
+		width: 91%;
+	}
+}
+@media screen and (max-width: 800px) {
+    .skills{
+   height: auto;
+    }
+}
+@media screen and (max-width: 599px) {
+    .skill_box{
+        flex-direction: column;
+    }
+    .skill_box .skill_front{
+        width: 98%;
+        height: auto;
+    }
+    .skill_box .skill_back{
+       width: 98%;
+       height: auto;
+    }
+}
+/* ============Portfolio Section Design=========================== */
+.Portfolio_container{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-evenly;
+    }
+    .box1{
+        width: 30%;
+        height: auto;
+        border: .5px solid var(--main-color);
+        padding: 10px;
+        margin: 5px;
+        padding-left: 5px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-radius: 10px;
+    }
+    .box1 .boxtop{
+        width: 98%;
+        height: 150px;
+        margin: 5px;
+        display: flex;
+    }
+    .box1 .boxtop #img{
+        width: 100%;
+        height: 100%;
+    }
+    .box1 .boxbottom{
+        display: flex;
+        width: 98%;
+        height: auto;
+        margin: 15px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .box1 .boxbottom #heading{
+        padding: 5px 10px;
+        text-align: center;
+    }   
+    .box1 .boxbottom #desc{
+        padding: 5px 10px;
+        text-align: center;
+    } 
+    .btn-subbox{
+         width: 100%;
+         height: auto;
+         margin-top: 1%;
+         margin-bottom: 1%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         }  
+    .btn-box.btns{
+         width: 100%;
+         height: auto;
+         margin-top: 3%;
+         margin-bottom: 2%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;   
+    }
+    @media screen and (max-width: 800px) and (min-width: 600px){
+        .box1{
+            width: 48%;
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 599px) {
+        .box1{
+            width: 98%;
+            height: auto;
+        }
+    }
+/*======= ==========contact design========================== */
+.contact{
+    width: 100%;
+    min-height: auto;
+    padding-bottom:7rem;
+    background-color: var(--second-bg-color);
+}
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder{
+ color: var(--text-color);
+}
+.contact form .focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea :valid~.focus{
+    width: 100%;
+}
+.contact form .textarea-field{
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.contact form .textarea-field textarea{
+    resize: none;
+}
+.contact form .btn-box.btns .btn{
+    cursor: pointer;
+    background: var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 10px;
+    width: 180px;
+    height: 120%;
+    font-weight: 600;
+    padding: 15px 15px;
+    border: 2px solid var(--second-bg-color);
+}
+/* ---------------------------------footer design------------------------------ */
+.footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+.footer-iconTop a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1rem;
+    overflow: hidden;
+}
+.footer-iconTop a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+}
+.footer-iconTop a:hover::before{
+    width: 100%;
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--bg-color);
+    transition: .5s;
+}
+.footer-iconTop a:hover i{
+    color: var(--main-color);
+}
+/* =================BREAKPOINTS================================== */
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    .section{
+        padding:10rem 3% 2rem;
+    }
+    .home{
+        padding: 0 4%;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media (max-width:768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--main-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+        display: none;
+}
+    .navbar.active{
+    display: block;
+}
+   .navbar .active-nav{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    z-index: -1;
+    transition: .25s ease;
+    transition-delay: 0s;
+   }
+   .navbar.active .active-nav{
+    left: 0;
+    transition-delay: .25s;
+   }
+   .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content #home_position{
+        font-size: 2.6rem;
+        margin-top: 5rem;
+    }
+    .home-content #home_who{
+        font-size: 3rem;
+        margin-top: 5rem;
+    }
+    .home-content #home_name{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .navbar.active a{
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+    }
+    @media(max-width:520px){
+        html{
+            font-size: 50%;
+        }
+        .home-content #home_name{
+            display: flex;
+            flex-direction: column;
+        }
+        .home-sci{
+            width: 160px;
+            padding: 15rem 25rem 15rem 25rem;
+        }
+        .home-sci a{
+            width: 38px;
+            height: 38px;
+            padding: 15rem 25rem 15rem 25rem;
+        }
+    }
+        @media (max-width: 462px){
+        .home-content #home_name{
+            font-size: 5.2rem;
+        }
+        .education {
+            padding: 10rem 4% 5rem 5%;
+        }
+        .contact form .input-box .input-field{
+            width: 100%;
+        }
+        .footer{
+            flex-direction: column-reverse;
+        }
+        .footer p{
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+    @media (max-width: 371px){
+        .home{
+            justify-content: center;
+        }
+        .home-content{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .home-content #home_name{
+            font-size: 5rem;
+        }
+    }
+
+    
+
+

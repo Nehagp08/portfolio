@@ -228,6 +228,8 @@ span{
 }
 .about-content #about_content_heading{
     font-size: 2.6rem;
+	color:var(--main-color);
+	
 }
 .about-content #about_content_para{
     font-size: 1.6rem;
